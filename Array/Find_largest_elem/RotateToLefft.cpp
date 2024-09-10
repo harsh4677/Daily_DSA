@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void Reverse(int arr[], int start, int end){
+    while(start <= end){
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+
+void RoateToleft(int arr[], int k, int n){
+    Reverse(arr, 0, n-k-1);
+    Reverse(arr, n-k, n-1);
+    Reverse(arr, 0, n-1);
+
+}
+
+int main(){
+
+}
