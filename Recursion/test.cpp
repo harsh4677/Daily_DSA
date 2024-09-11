@@ -1,22 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int SecondLargestElem(const vector<int>& arr){
-    int largest = INT_MIN, Second_largest = INT_MIN;
-    int n = arr.size();
+//Printing 1 To N
+void Print1ToN(int num){
 
-    for(n <2) return -1;
-    for(int i=0; i<n; i++){
-        if(arr[i] > largest){
-            Second_largest = largest;
-            largest = arr[i]
-        }else if(arr[i] > Second_largest && arr[i] != largest){
-            Second_largest = arr[i];
-        }
+    if(num == 1){
+        cout << N <<" ";
+        return;
     }
-    return Second_largest;
+
+    Print1ToN(num -1);
+    cout << num << " ";
+
 }
 
+//printing N to 1 
+
+void PrintNTo1(int num){
+    if(num == 1){
+        cout << num << " ";
+        return;
+    }
+    cout << num << " ";
+    PrintNTo1(num - 1);
+}
+
+vector<long long> factorialNumber(long long num){
+    vector<long long> result
+}
 int main(){
 
 }
+
